@@ -26,3 +26,8 @@ func ConcatUint16(x, y uint16) uint32 {
 func ConcatUint32(x, y uint32) uint64 {
 	return uint64(x)<<32 | uint64(y)
 }
+
+// reverse reverse uin16 hi and low bits
+func reverse(val uint16) uint16 {
+	return ((val & 0xff00) >> 8) | ((val & 0x00ff) << 8)
+}

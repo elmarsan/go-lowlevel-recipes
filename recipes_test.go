@@ -49,3 +49,13 @@ func TestConcatUint32(t *testing.T) {
 		t.Errorf("Wrong uint32 concatenation, expected 0x%x, received: 0x%x", expected, res)
 	}
 }
+
+func TestReverse(t *testing.T) {
+	var val uint16 = 0xaabb
+
+	reversed := reverse(val)
+
+	if reversed != 0xbbaa {
+		t.Error("Wrong reverse")
+	}
+}
